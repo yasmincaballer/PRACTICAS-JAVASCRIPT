@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi colección de JavaScript</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4fa;
+    color: #472442;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(135deg, #45115e, #62125e, #b71ca5);
+    color: white;
+    padding: 45px 8%;
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+    background: #653862b0;
+    color: #cf3ae6;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CONTENIDO */
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #4f0f5e;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* BUSCADOR */
+#buscar {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto 35px;
+    padding: 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+#buscar:focus {
+    border-color: #a618da;
+}
+
+/* CATEGORIAS */
+.seccion {
+    margin-bottom: 35px;
+}
+
+.seccion h2 {
+    color: #8f1a8d;
+    border-left: 5px solid #b11fa5;
+    padding-left: 12px;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+/* TARJETAS */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.tarjeta {
+    display: block;
+    background: white;
+    text-decoration: none;
+    color: #33063c;
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #dce5f1;
+    box-shadow: 0 4px 12px #00000010;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    border-color: #7b0e8a;
+    box-shadow: 0 8px 20px #740c6d30;
+}
+
+.icono {
+    background: #dbeafe;
+    color: #bc38dd;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.vacio {
+    display: none;
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background: #671460;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 45px;
+}
+
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .tarjeta {
+        padding: 14px;
+    }
+
+    .tarjeta h3 {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+
+    <div class="logo">JS</div>
+
+    <h1>Mi colección de JavaScript</h1>
+
+    <p>
+        Bienvenido a mi página de programación.
+        <br>
+        Aquí encontrarás todos mis ejercicios
+        de JavaScript.
+    </p>
+
+</header>
+
+<main>
+
+    <div class="titulo">
+        <h2>Mis ejercicios de programación</h2>
+        <p>Selecciona el ejercicio que deseas abrir.</p>
+    </div>
+
+    <!-- BUSCADOR -->
+    <input
+        type="text"
+        id="buscar"
+        placeholder="🔍 Buscar un ejercicio..."
+    >
+
+    <!-- FUNCIONES -->
+    <section class="seccion">
+
+        <h2>01. Funciones JavaScript</h2>
+
+        <div class="contenedor">
+
+            <a href="funcion.html" class="tarjeta">
+                <div class="icono">ƒ</div>
+                <h3>Función</h3>
+                <p>funcion.html</p>
+            </a>
+
+            <a href="funcion2.html" class="tarjeta">
+                <div class="icono">ƒ</div>
+                <h3>Función 2</h3>
+                <p>funcion2.html</p>
+            </a>
+
+            <a href="funcionanonima.html" class="tarjeta">
+                <div class="icono">ƒ</div>
+                <h3>Función anónima</h3>
+                <p>funcionanonima.html</p>
+            </a>
+
+            <a href="funcionevento.html" class="tarjeta">
+                <div class="icono">⚡</div>
+                <h3>Función evento</h3>
+                <p>funcionevento.html</p>
+            </a>
+
+            <a href="funcionflecha.html" class="tarjeta">
+                <div class="icono">➜</div>
+                <h3>Función flecha</h3>
+                <p>funcionflecha.html</p>
+            </a>
+
+            <a href="funcionGrupo.html" class="tarjeta">
+                <div class="icono">ƒ</div>
+                <h3>Función grupo</h3>
+                <p>funcionGrupo.html</p>
+            </a>
+
+            <a href="funcionParametros.html" class="tarjeta">
+                <div class="icono">ƒ</div>
+                <h3>Función con parámetros</h3>
+                <p>funcionParametros.html</p>
+            </a>
+
+            <a href="funcionrecursiva.html" class="tarjeta">
+                <div class="icono">↻</div>
+                <h3>Función recursiva</h3>
+                <p>funcionrecursiva.html</p>
+            </a>
+
+            <a href="funcionreturn.html" class="tarjeta">
+                <div class="icono">↩</div>
+                <h3>Función return</h3>
+                <p>funcionreturn.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CONDICIONES -->
+    <section class="seccion">
+
+        <h2>02. Condiciones y operaciones</h2>
+
+        <div class="contenedor">
+
+            <a href="condicional.html" class="tarjeta">
+                <div class="icono">?</div>
+                <h3>Condicional</h3>
+                <p>condicional.html</p>
+            </a>
+
+            <a href="comparacionnum.html" class="tarjeta">
+                <div class="icono">≷</div>
+                <h3>Comparación de números</h3>
+                <p>comparacionnum.html</p>
+            </a>
+
+            <a href="division.html" class="tarjeta">
+                <div class="icono">÷</div>
+                <h3>División</h3>
+                <p>division.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CICLOS -->
+    <section class="seccion">
+
+        <h2>03. Ciclos</h2>
+
+        <div class="contenedor">
+
+            <a href="for.html" class="tarjeta">
+                <div class="icono">↻</div>
+                <h3>Ciclo For</h3>
+                <p>for.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ELEMENTOS DOM -->
+    <section class="seccion">
+
+        <h2>04. Manipulación del DOM</h2>
+
+        <div class="contenedor">
+
+            <a href="getelementbyid.html" class="tarjeta">
+                <div class="icono">#</div>
+                <h3>Get Element By ID</h3>
+                <p>getelementbyid.html</p>
+            </a>
+
+            <a href="getelementbyclassname.html" class="tarjeta">
+                <div class="icono">#</div>
+                <h3>Get Elements By Class Name</h3>
+                <p>getElementsByClassName.html</p>
+            </a>
+
+            <a href="getelementsbytagname().html" class="tarjeta">
+                <div class="icono">#</div>
+                <h3>Get Elements By Tag Name</h3>
+                <p>getElementsByTagName.html</p>
+            </a>
+
+            <a href="queryelementoxclase.html" class="tarjeta">
+                <div class="icono">#</div>
+                <h3>Query Elemento por clase</h3>
+                <p>queryelementoxclase.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CAMBIOS DE ELEMENTOS -->
+    <section class="seccion">
+
+        <h2>05. Cambios en la página</h2>
+
+        <div class="contenedor">
+
+            <a href="idcolorboton.html" class="tarjeta">
+                <div class="icono">🎨</div>
+                <h3>Cambiar color del botón</h3>
+                <p>idcolorboton.html</p>
+            </a>
+
+            <a href="idmensaje.html" class="tarjeta">
+                <div class="icono">✉</div>
+                <h3>Mensaje por ID</h3>
+                <p>idmensaje.html</p>
+            </a>
+
+            <a href="innercambiartexto.html" class="tarjeta">
+                <div class="icono">T</div>
+                <h3>Cambiar texto</h3>
+                <p>innercambiartexto.html</p>
+            </a>
+
+            <a href="innerimagen.html" class="tarjeta">
+                <div class="icono">🖼</div>
+                <h3>Cambiar imagen</h3>
+                <p>innerimagen.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- OTROS EJERCICIOS -->
+    <section class="seccion">
+
+        <h2>06. Otros ejercicios</h2>
+
+        <div class="contenedor">
+
+            <a href="ciudadano.html" class="tarjeta">
+                <div class="icono">★</div>
+                <h3>Ciudadano</h3>
+                <p>ciudadano.html</p>
+            </a>
+
+            <a href="estudiante.html" class="tarjeta">
+                <div class="icono">★</div>
+                <h3>Estudiante</h3>
+                <p>estudiante.html</p>
+            </a>
+
+        </div>
+    </section>
+
+    <p id="vacio" class="vacio">
+        No se encontraron ejercicios.
+    </p>
+
+</main>
+
+<footer>
+
+    <h3>Mi colección de JavaScript</h3>
+
+    <p>Aprendiendo a programar paso a paso 💙</p>
+
+</footer>
+
+<!-- BUSCADOR JAVASCRIPT -->
+<script>
+
+const buscar = document.getElementById("buscar");
+
+const tarjetas = document.querySelectorAll(".tarjeta");
+
+buscar.addEventListener("input", function() {
+
+    let texto = buscar.value.toLowerCase();
+
+    let contador = 0;
+
+    tarjetas.forEach(function(tarjeta) {
+
+        let nombre = tarjeta.innerText.toLowerCase();
+
+        if (nombre.includes(texto)) {
+
+            tarjeta.style.display = "block";
+            contador++;
+
+        } else {
+
+            tarjeta.style.display = "none";
+
+        }
+
+    });
+
+    document.querySelectorAll(".seccion").forEach(function(seccion) {
+
+        let visibles = [...seccion.querySelectorAll(".tarjeta")]
+            .some(t => t.style.display !== "none");
+
+        seccion.style.display = visibles ? "block" : "none";
+
+    });
+
+    document.getElementById("vacio").style.display =
+        contador === 0 ? "block" : "none";
+
+});
+
+</script>
+
+</body>
+</html>
