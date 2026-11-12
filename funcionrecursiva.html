@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Funcion recursiva</title>
 </head>
 <body>
+
     <h2>Cuenta regresiva</h2>
-    <div id="resultado"></div>
+
+    <p id="resultado"></p>
+
     <script>
         function cuentaRegresiva(numero) {
-    if (numero <= 0) {
-        console.log("¡Despegue!");
-        return;
-    }
 
-    console.log(numero);
-    cuentaRegresiva(numero - 1);
-}
+            if (numero <= 0) {
+                document.getElementById("resultado").innerHTML += "¡Despegue!";
+                return;
+            }
 
-cuentaRegresiva(3);
+            document.getElementById("resultado").innerHTML += numero + "<br>";
+
+            cuentaRegresiva(numero - 1);
+        }
+
+        cuentaRegresiva(3);
     </script>
+
 </body>
 </html>
