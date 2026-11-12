@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Datos</h1>
+    <script>
+        const continuar = confirm ("¿Deseas ingresar tus datos?");
+        if(continuar){
+            let nombre=prompt("Escribe tu nombre");
+            let edad=prompt("Escribe tu edad");
+            let especialidad=prompt("Escribe tu especialidad");
+            let direccion=prompt("Escribe tu direccion");
+            let telefono=prompt("Escribe tu telefono");
+            let correo=prompt("Escribe tu correo");
+            document.write("Nombre:"+nombre+"<br>");
+            document.write("Edad:"+edad+"<br>");
+            document.write("Especialidad:"+especialidad+"<br>");
+            document.write("Direccion:"+direccion+"<br>");
+            document.write("Telefono:"+telefono+"<br>");
+            document.write("Correo:"+correo+"<br>");
+        }
+        else{
+            alert("Tengo flojera")
+        }
+    </script>
+    <a href="index.html" class="btn-inicio">Inicio</a>
+</body>
+</html>
